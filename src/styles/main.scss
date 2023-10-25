@@ -5,6 +5,7 @@
 @use '_available-devices';
 @use '_faq';
 @use '_footer';
+@use '_header';
 
 @font-face {
     font-family: 'Avenir';
@@ -76,18 +77,41 @@ body {
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
     border: none;
     transition: 0.3s;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBotaoPrimario;
 
     &:hover {
-        background-color: lighten(#6421ff, 5%);
+        background-color: lighten(variaveis.$corBotaoPrimario, 5%);
         transition: 0.3s;
+    }
+
+    &--secondary {
+        background-color: variaveis.$corBotaoSecundario;
+        border-color: variaveis.$corBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corBotaoSecundario, 5%);
+        }
+    }
+
+    &--dark {
+        background-color: variaveis.$corBotaoDark;
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corBotaoDark;
+        }
     }
 }
 
